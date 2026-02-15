@@ -1,87 +1,83 @@
-# Welcome to React Router!
+# 🚀 AI Resume Screener & Analyzer (Powered by Gemini Pro)
 
-A modern, production-ready template for building full-stack React applications using React Router.
+**Stop manual screening. Let AI analyze, score, and rank candidates instantly.**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+This project leverages **Google's Gemini Pro 1.5** LLM to parse resumes, extract key skills, and compare them against job descriptions. Built with **React Router v7 (Remix)** for a blazing fast full-stack experience.
 
-## Features
+![Project Banner](https://placehold.co/1200x400?text=AI+Resume+Analyzer)
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## ✨ Key Features
 
-## Getting Started
+- **🤖 LLM-Powered Analysis:** Uses Google Gemini Pro to understand context, not just keywords.
+- **📊 Automated Scoring:** Generates a match score (0-100%) based on Job Description (JD) relevance.
+- **💡 Skill Gap Identification:** Highlights missing skills critical for the role.
+- **📝 Actionable Feedback:** Provides specific advice on how to improve the resume.
+- **⚡ Modern Stack:** Built with React Router (SSR), Tailwind CSS v4, and TypeScript.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [React Router v7](https://reactrouter.com/) (formerly Remix)
+- **AI Model:** [Google Gemini Pro 1.5](https://ai.google.dev/) via Vercel AI SDK
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Deployment:** Docker / Vercel ready
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- A Google AI Studio API Key (`GEMINI_API_KEY`)
 
 ### Installation
 
-Install the dependencies:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/MawGyi/ai-resume-analyzer-wmo.git
+   cd ai-resume-analyzer-wmo
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env` file in the root directory:
+   ```env
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+4. **Run Development Server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## 📦 Deployment
+
+### Docker
+
+Build and run the container locally:
 
 ```bash
-npm install
+docker build -t ai-resume-analyzer .
+docker run -p 3000:3000 ai-resume-analyzer
 ```
 
-### Development
+### Vercel / Netlify
 
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This project is optimized for edge-ready deployment. Simply import this repo into Vercel/Netlify dashboard.
 
 ---
 
-Built with ❤️ using React Router.
+## 👨‍💻 Author
+
+**Win Maw Oo**  
+*Technical Business Analyst | Product Owner | Full Stack Engineer*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/win-maw-oo-33265560/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-purple?style=flat)](https://wmoportfolio.vercel.app/)
+
+---
+
+*Star ⭐ this repo if you find it useful!*
