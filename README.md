@@ -1,25 +1,36 @@
 # 🚀 AI Resume Screener & Analyzer (Powered by Gemini Pro)
 
-**Stop manual screening. Let AI analyze, score, and rank candidates instantly.**
+**Transform recruitment with AI. Screen resumes, extract skills, and rank candidates instantly.**
 
-This project leverages **Google's Gemini Pro 1.5** LLM to parse resumes, extract key skills, and compare them against job descriptions. Built with **React Router v7 (Remix)** for a blazing fast full-stack experience.
+![Project Banner](https://placehold.co/1200x400/indigo/white?text=AI+Resume+Screener+Dashboard)
 
-![Project Banner](https://placehold.co/1200x400?text=AI+Resume+Analyzer)
+## 💡 Why This Tool?
+
+Recruiters spend an average of **7 seconds** scanning a resume. Manual screening is slow, biased, and prone to error. 
+
+This project solves that by using **Google's Gemini Pro 1.5 LLM** to:
+1. **Parse Complex PDFs:** Understands layout, context, and nuance (not just keyword matching).
+2. **Score Relevance:** Calculates a 0-100% match score against specific Job Descriptions (JD).
+3. **Visualize Gaps:** Instantly highlights missing skills via interactive charts.
 
 ## ✨ Key Features
 
-- **🤖 LLM-Powered Analysis:** Uses Google Gemini Pro to understand context, not just keywords.
-- **📊 Automated Scoring:** Generates a match score (0-100%) based on Job Description (JD) relevance.
-- **💡 Skill Gap Identification:** Highlights missing skills critical for the role.
-- **📝 Actionable Feedback:** Provides specific advice on how to improve the resume.
-- **⚡ Modern Stack:** Built with React Router (SSR), Tailwind CSS v4, and TypeScript.
+- **📂 Drag & Drop Upload:** Modern, intuitive UI for PDF uploads.
+- **🤖 LLM-Powered Analysis:** Deep semantic understanding of candidate profiles.
+- **📊 Interactive Scoring:** Visual breakdown of Match Score using Recharts.
+- **⚡ Real-Time Feedback:** Actionable insights on what to improve.
+- **🔒 Privacy First:** Resume data is processed in-memory and not stored persistently.
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [React Router v7](https://reactrouter.com/) (formerly Remix)
-- **AI Model:** [Google Gemini Pro 1.5](https://ai.google.dev/) via Vercel AI SDK
-- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
-- **Deployment:** Docker / Vercel ready
+| Component | Technology |
+|-----------|------------|
+| **Frontend** | [React Router v7 (Remix)](https://reactrouter.com/) |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) + Lucide Icons |
+| **Visualization** | [Recharts](https://recharts.org/) |
+| **AI Model** | [Google Gemini Pro 1.5](https://ai.google.dev/) |
+| **PDF Parsing** | `pdf-parse` (Server-Side) |
+| **Runtime** | Node.js 20+ |
 
 ## 🚀 Getting Started
 
@@ -66,7 +77,7 @@ docker run -p 3000:3000 ai-resume-analyzer
 
 ### Vercel / Netlify
 
-This project is optimized for edge-ready deployment. Simply import this repo into Vercel/Netlify dashboard.
+This project is optimized for edge-ready deployment. simply import this repo into Vercel/Netlify dashboard.
 
 ---
 
