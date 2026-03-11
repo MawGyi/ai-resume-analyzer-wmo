@@ -1,7 +1,6 @@
 import {
   RadialBarChart,
   RadialBar,
-  Legend,
   ResponsiveContainer,
   PolarAngleAxis,
 } from "recharts";
@@ -20,9 +19,11 @@ export default function ScoreChart({ score }: ScoreProps) {
   ];
 
   return (
-    <div className="w-full h-64 flex flex-col items-center justify-center bg-white rounded-xl shadow-sm p-4 border border-gray-100">
-      <h3 className="text-lg font-semibold text-gray-700 mb-2">AI Match Score</h3>
-      <div className="w-full h-48 relative">
+    <div className="glass-card" style={{ margin: 0, display: "flex", flexDirection: "column", alignItems: "center", padding: "20px 24px" }}>
+      <div style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-tertiary)", marginBottom: 12, width: "100%" }}>
+        AI Match Score
+      </div>
+      <div style={{ width: "100%", height: 180, position: "relative" }}>
         <ResponsiveContainer width="100%" height="100%">
           <RadialBarChart
             cx="50%"
@@ -41,7 +42,7 @@ export default function ScoreChart({ score }: ScoreProps) {
               tick={false}
             />
             <RadialBar
-              background
+              background={{ fill: "var(--bg-hover)" }}
               dataKey="value"
               cornerRadius={30}
               fill="#8884d8"
@@ -51,14 +52,14 @@ export default function ScoreChart({ score }: ScoreProps) {
               y="50%"
               textAnchor="middle"
               dominantBaseline="middle"
-              className="fill-gray-700 text-3xl font-bold"
+              style={{ fill: "var(--text-primary)", fontSize: 32, fontWeight: 800 }}
             >
               {score}%
             </text>
           </RadialBarChart>
         </ResponsiveContainer>
       </div>
-      <p className="text-sm text-gray-500 mt-2 text-center">
+      <p style={{ fontSize: 13, color: "var(--text-tertiary)", marginTop: 8, textAlign: "center" }}>
         {score > 75
           ? "Excellent Match! 🚀"
           : score > 50
